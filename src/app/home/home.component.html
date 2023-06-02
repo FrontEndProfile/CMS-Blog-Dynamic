@@ -1,0 +1,132 @@
+<div id="main">
+  <div id="page">
+    <canvas id="does-not-exist"></canvas>
+    <div class="fixed-hero">
+      <section class="hero container">
+        <div class="hero-tittle-one test">
+          Angular of the day
+        </div>
+      </section>
+      <div class="marquee">
+        <div class="marquee-container">
+          <div class="marquee-part">Techsembly</div>
+          <div class="marquee-part">project</div>
+          <div class="marquee-part">Hype</div>
+          <div class="marquee-part">Angular</div>
+          <div class="marquee-part">Blogs</div>
+          <div class="marquee-part">Code</div>
+          <div class="marquee-part">typescript</div>
+          <div class="marquee-part">Techsembly</div>
+          <div class="marquee-part">project</div>
+          <div class="marquee-part">Hype</div>
+          <div class="marquee-part">Angular</div>
+          <div class="marquee-part">Blogs</div>
+          <div class="marquee-part">Code</div>
+          <div class="marquee-part">typescript</div>
+          <div class="marquee-part">Techsembly</div>
+          <div class="marquee-part">project</div>
+          <div class="marquee-part">Hype</div>
+          <div class="marquee-part">Angular</div>
+          <div class="marquee-part">Blogs</div>
+          <div class="marquee-part">Code</div>
+          <div class="marquee-part">typescript</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="page1">
+    <div class="projects-layout">
+      <div class="projects-card">
+        <div class="card-top">
+          <div class="projects-card-sub-tittle"></div>
+          <div class="projects-card-tittle"></div>
+        </div>
+      </div>
+      <div class="projects-card">
+        <div class="card-top">
+          <div class="projects-card-sub-tittle"></div>
+          <div class="projects-card-tittle"></div>
+        </div>
+      </div>
+      <div class="projects-card">
+        <div class="projects-card-sub-tittle"></div>
+        <div class="projects-card-tittle"></div>
+      </div>
+    </div>
+  </div>
+  <div id="page2">
+    <div class="feature-section">
+    <div class="feature-layout">
+      <div class="feature-card">
+        <div class="top">Test</div>
+        <div class="text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta possimus sequi natus pariatur qui optio nostrum dolorem, cumque voluptatibus esse!
+          </p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="top">Test</div>
+        <div class="text">Test</div>
+      </div>
+      <div class="feature-card">
+        <div class="top">Test</div>
+        <div class="text">Test</div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div *ngIf="blogData$ | async as blogData" class="d-n">
+  <!-- <pre>
+    {{ blogData | json }}
+  </pre> -->
+
+  <!-- === code ===  -->
+  <!-- cards listing  -->
+  <div class="card">
+    <h1 id="test">TESTs</h1>
+    <div *ngFor="let x of blogData.items">
+      <div class="card-image"><img [src]="x.fields.heroImg.fields.file.url" alt=""></div>
+      <div class="card-tittle">{{x.fields.heroHead}}</div>
+      <a [routerLink]="['view',x.sys.id]">view page</a>
+    </div>
+  </div>
+</div>

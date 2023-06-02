@@ -1,0 +1,85 @@
+.hero {
+  &-tittle-one {
+    font-size: 7.5vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 48px;
+  }
+}
+
+.boxes {
+  display: flex;
+
+  .box {
+    min-width: 500px;
+    background: lightblue;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+  }
+}
+
+
+
+
+
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  min-height: 81px;
+  border-top: 2px solid #f44;
+  border-bottom: 2px solid #f44;
+  top: calc(100% - 81px);
+
+  .marquee-container {
+    width: 200%;
+    display: flex;
+    align-items: center;
+    grid-column-gap: 35px;
+    grid-row-gap: 35px;
+    animation: marquee 15s linear infinite;
+    position: absolute;
+    padding: 40px 0px;
+    height: 100%;
+    inset: 0;
+
+    .marquee-part {
+      font-size: 3vw;
+      float: left;
+      color: #f44;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+  }
+}
+
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+
+
+.projects-layout {
+  display: flex;
+  grid-gap: 30px;
+  .projects-card {
+    grid-row-gap: 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 30px 30px;
+    width: 50%;
+  }
+}
