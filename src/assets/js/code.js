@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
   function loco() {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -231,4 +231,4 @@ document.addEventListener("DOMContentLoaded", function () {
     start: `top top`,
     end: `600% top`,
   });
-});
+// });
