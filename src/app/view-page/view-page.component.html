@@ -18,9 +18,7 @@
         </div>
         <div class="view-overlay">
           <div class="container">
-            <!-- <img class="view-logo" [src]="DataId.fields.bannerLogoView.fields.file.url"
-              [alt]="DataId.fields.bannerLogoView.fields.title"> -->
-            <div class="view-tittle" [attr.data-aos]="DataId ? 'fade-left' : 'fade-right'">{{DataId.fields.heroHead}}</div>
+            <div class="view-tittle">{{DataId.fields.heroHead}}</div>
             <div class="view-content">{{DataId.fields.heroContent}}</div>
             <a [routerLink]="['#next']" class="scroll-link">
               <div class="box">
@@ -77,6 +75,11 @@
 
   <div class="last-intro" *ngIf="blogDataId$ | async as DataId"
     [ngStyle]="{'background-image': 'url(' + DataId.fields.viewLastBanner.fields.file.url + ')'}">
+    <div class="intro-content">
+      <h1>{{DataId.fields.viewLastIntroTittle}}</h1>
+      <p>{{DataId.fields.viewLastIntroContent}}</p>
+  
+    </div>
 
   </div>
 
