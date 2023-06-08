@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ViewPageComponent } from './view-page/view-page.component';
+import { TestAnimationComponent } from './test-animation/test-animation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ViewPageComponent,
+    TestAnimationComponent,
   ],
   imports: [
     BrowserModule,

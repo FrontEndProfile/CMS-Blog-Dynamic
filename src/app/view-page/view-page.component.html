@@ -1,17 +1,84 @@
-<div *ngIf="blogDataId$ | async as DataId">
-  <!-- <pre>
-    {{DataId | json}}
-  </pre> -->
-  <!-- BLOG PAGE VIEW -->
-  <div class="View">
-    <div class="View-hero" >
-      <img class="View-hero-img" data-aos="new" data-aos-easing="ease-in-cubic" src="../../assets/images/banner.jpg" alt="">
-    </div>
-    
-
-    <!-- <div class="card-image"><img [src]="DataId.fields.heroImg.fields.file.url" alt=""></div>
-    <div class="card-tittle">{{DataId.fields.heroHead}}</div>
-    <a [routerLink]="[]">view page</a> -->
+<div class="over-lap">
+  <div class="relative z-10">
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
   </div>
+  <!-- <div  *ngIf="blogDataId$ | async as DataId">
+    <pre>
+      {{DataId | json}}
+    </pre>
+  </div> -->
+  <div class="first-intro" *ngIf="blogDataId$ | async as DataId">
+    <section class="View">
+      <div class="View-hero">
+        <div class="View-video">
+          <video autoplay loop muted class="">
+            <source [src]="DataId.fields.bannerVedio.fields.file.url" type="video/mp4">
+          </video>
+        </div>
+        <div class="view-overlay">
+          <div class="container">
+            <!-- <img class="view-logo" [src]="DataId.fields.bannerLogoView.fields.file.url"
+              [alt]="DataId.fields.bannerLogoView.fields.title"> -->
+            <div class="view-tittle" [attr.data-aos]="DataId ? 'fade-left' : 'fade-right'">{{DataId.fields.heroHead}}</div>
+            <div class="view-content">{{DataId.fields.heroContent}}</div>
+            <a [routerLink]="['#next']" class="scroll-link">
+              <div class="box">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="track">
+
+    <div class="panel">
+      <div class="card">
+        <div class="content" *ngIf="blogDataId$ | async as DataId">
+          <h1>{{DataId.fields.frameTittle}}</h1>
+          <p>{{DataId.fields.frameContent}}</p>
+        </div>
+        <div class="media" *ngIf="blogDataId$ | async as DataId">
+          <img [src]="DataId.fields.frameIntro.fields.file.url" [alt]="DataId.fields.heroImg.fields.title">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="card">
+        <div class="card-img" *ngIf="blogDataId$ | async as DataId">
+          <img [src]="DataId.fields.frameOne.fields.file.url" [alt]="DataId.fields.heroImg.fields.title">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="card">
+        <div class="card-img" *ngIf="blogDataId$ | async as DataId">
+          <img [src]="DataId.fields.frameTwo.fields.file.url" [alt]="DataId.fields.heroImg.fields.title">
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="card">
+        <div class="card-img" *ngIf="blogDataId$ | async as DataId">
+          <img [src]="DataId.fields.frameThree.fields.file.url" [alt]="DataId.fields.heroImg.fields.title">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="last-intro" *ngIf="blogDataId$ | async as DataId"
+    [ngStyle]="{'background-image': 'url(' + DataId.fields.viewLastBanner.fields.file.url + ')'}">
+
+  </div>
+
 
 </div>
