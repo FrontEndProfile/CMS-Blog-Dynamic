@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from "jquery"
+// import * as $ from "jquery"
 
 
 
@@ -20,12 +20,12 @@ export class TestAnimationComponent implements OnInit {
     //   q.src = "/assets/js/test.js";
     //   $("body").append(q);
     // });
-    $(document).ready(function () {
-      var s = document.createElement("script");
-      s.type = "text/javascript";
-      s.src = "/assets/js/view.js";
-      $("body").append(s);
-    });
+    // $(document).ready(function () {
+    //   var s = document.createElement("script");
+    //   s.type = "text/javascript";
+    //   s.src = "/assets/js/view.js";
+    //   $("body").append(s);
+    // });
   }
 
 }
