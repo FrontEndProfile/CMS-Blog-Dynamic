@@ -8,18 +8,18 @@
       {{DataId | json}}
     </pre>
   </div> -->
-  <div class="first-intro" *ngIf="blogDataId$ | async as DataId">
+  <div class="first-intro">
     <section class="View">
       <div class="View-hero">
         <div class="View-video">
-          <video autoplay loop muted class="">
+          <video autoplay loop muted class="" *ngIf="blogDataId$ | async as DataId">
             <source [src]="DataId.fields.bannerVedio.fields.file.url" type="video/mp4">
           </video>
         </div>
         <div class="view-overlay">
           <div class="container">
-            <div class="view-tittle">{{DataId.fields.heroHead}}</div>
-            <div class="view-content">{{DataId.fields.heroContent}}</div>
+            <div class="view-tittle" *ngIf="blogDataId$ | async as DataId">{{DataId.fields.heroHead}}</div>
+            <div class="view-content" *ngIf="blogDataId$ | async as DataId">{{DataId.fields.heroContent}}</div>
             <a [routerLink]="['#next']" class="scroll-link">
               <div class="box">
                 <span></span>
