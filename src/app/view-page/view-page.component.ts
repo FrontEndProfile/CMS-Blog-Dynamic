@@ -20,14 +20,22 @@ export class ViewPageComponent implements OnInit {
   element: any;
 
   blogDataId$: Observable<any> | undefined;
+
+  test:any
+
   constructor(private route: ActivatedRoute, private contentfullservice: ContentService) {
   }
 
-  showItems: boolean = false; 
 
-  showItemsWithAnimation() {
-    this.showItems = true;
+
+  scrollToNextSection() {
+    const nextSectionElement = document.getElementById('next');
+    if (nextSectionElement) {
+      nextSectionElement.scrollIntoView({ behavior: 'smooth' });
+    }
   }
+  
+  
   ngOnInit(): void {
     this.route.params.subscribe(
       params => {
@@ -53,6 +61,10 @@ export class ViewPageComponent implements OnInit {
     $("body").append(s);
     // });
     // $('html').removeAttr('class');
+
+
+    this.test = this.blogDataId$
+    
   }
 
 }

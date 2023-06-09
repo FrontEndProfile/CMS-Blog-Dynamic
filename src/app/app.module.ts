@@ -7,6 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { ViewPageComponent } from './view-page/view-page.component';
 import { TestAnimationComponent } from './test-animation/test-animation.component';
 
+import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +19,8 @@ import { TestAnimationComponent } from './test-animation/test-animation.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

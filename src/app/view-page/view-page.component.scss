@@ -10,6 +10,8 @@ html {
   max-height: 100vh;
   width: 100%;
   position: relative;
+  overflow: hidden;
+
 
   .View-video {
     width: 100%;
@@ -136,6 +138,7 @@ html {
   height: 100vh;
   display: flex;
   flex-wrap: nowrap;
+  color: #c0bcb9;
 
   // background: rgb(245, 119, 119);
   &::after {
@@ -144,7 +147,7 @@ html {
     inset: auto 0 0;
     z-index: -1;
     font-size: 20vw;
-    color: #c0bcb9;
+    color: inherit;
     padding-inline: 1.5vw;
   }
 }
@@ -373,6 +376,7 @@ html {
     content: '';
     background: linear-gradient(-270deg, #000 20%, transparent);
   }
+
   .intro-content {
     width: 100%;
     height: 100%;
@@ -384,12 +388,16 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     h1 {
       font-size: 5vw;
       font-weight: 400;
       letter-spacing: 3px;
       margin-bottom: 50px;
+      max-width: 50%;
+
     }
+
     p {
       font-size: 1.8vw;
       font-weight: 400;
@@ -398,7 +406,65 @@ html {
       max-width: 45%;
       line-height: 1.2;
       color: rgba(255, 255, 255, 0.9);
+      max-width: 50%;
+
     }
   }
 
+}
+
+
+
+
+
+// AOS Animation
+
+[data-aos="hero-back"] {
+  opacity: 0;
+  transform: scale(1.5);
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  // @media screen and (min-width: 768px) {
+  //   transform: translateY(100px);
+
+  //   &.aos-animate {
+  //     transform: translateY(0);
+  //   }
+  // }
+}
+
+[data-aos="hero-tittle"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+  }
+}
+
+// swipe-back
+[data-aos="swipe-back"] {
+  color: transparent;
+  transition-property: color;
+
+  &.aos-animate {
+    color: #c0bcb9;
+  }
+}
+
+// last
+[data-aos="last-text"] {
+  color: transparent;
+  transform: translateY(100px);
+  transition-property: color, transform;
+
+  &.aos-animate {
+    color: currentColor;
+    transform: translateY(0px);
+  }
 }
