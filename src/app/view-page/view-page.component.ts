@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContentService } from '../services/content.service'
 import { Observable } from 'rxjs';
-import * as $ from "jquery"
-import { gsap } from "gsap";
+// import * as $ from "jquery"
+// import { gsap } from "gsap";
 
 
 // import 'src/assets/js/code.js'

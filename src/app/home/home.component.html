@@ -1,4 +1,3 @@
-
 <div id="main">
 
   <div id="page">
@@ -9,6 +8,9 @@
           Angular of the day
         </div>
       </section>
+      
+      <a href="#page2" style="font-size: 20px;">page 2</a>
+
       <div class="marquee">
         <div class="marquee-container">
           <div class="marquee-part">Techsembly</div>
@@ -44,8 +46,6 @@
       <!-- <pre>
           {{ blogData | json }}
         </pre> -->
-
-      <!-- === code ===  -->
       <!-- cards listing  -->
       <div class="projects-card" *ngFor="let data of blogData.items">
         <div class="card-top">
@@ -59,16 +59,16 @@
             </svg>
           </a>
         </div>
-        <div class="project-image"><img [src]="data.fields.heroImg.fields.file.url" [alt]="data.fields.heroImg.fields.title"></div>
+        <div class="project-image"><img [src]="data.fields.heroImg.fields.file.url"
+            [alt]="data.fields.heroImg.fields.title"></div>
 
       </div>
-
-
-
     </div>
   </div>
   <div id="page2">
-    <div class="feature-section">
+    <div class="feature-section whatI" >
+    <h3>project features</h3>
+
       <div class="feature-layout">
         <div class="feature-card">
           <div class="top">Fast Delivery</div>
